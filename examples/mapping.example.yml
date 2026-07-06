@@ -1,0 +1,11 @@
+# Map Jamf smart groups (by name or id) to the IdP group whose membership
+# should mirror device compliance. You can point the same Jamf group at both
+# an Okta and an Entra group.
+mappings:
+  - jamf_smart_group: "Compliant - macOS"      # name or numeric id
+    provider: okta
+    idp_group_id: "00g1abcdEXAMPLEokta"
+
+  - jamf_smart_group: "Compliant - macOS"
+    provider: entra
+    idp_group_id: "11111111-2222-3333-4444-555555555555"
